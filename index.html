@@ -36,15 +36,19 @@
           <input name="passwords[new]" placeholder="new password" type="password">
           <button type="submit">Change Password</button>
         </form>
+      
 
         <form id="sign-out">
           <button type="submit">Sign Out</button>
         </form>
+        <div id="content">
 
         <button id="create-game">New Game</button>
 
-        <button id="games-index">Games Played</button>
+        <button id="game-index">Games Played</button>
 
+        <div id="content"></div> 
+          <!-- come back to CONTENT -->
 
         <!-- <form id="new-game">
           <button type="submit">New Game</button>
@@ -53,25 +57,65 @@
         <!-- <form id="games-played">
           <button type="submit">Games Played</button>
         </form> -->
+        
+        <div class="wrapper">
+  
+          <div class="dialogs">
+            
+            <div class="cover"></div>
+          
+            <div class="end">
+              <h2 class="msg"></h2>
+              <input class="btn btn-outline-primary" type="reset" value="Reset">
+            </div> <!-- end-end -->
 
-      <div id="content">
+          </div> <!-- end-dialogs -->
+        
+      <div class="container">
+        <h1>Tic Tac Toe</h1>
+          <div class="board" id="board">
+            <div class="cell" data-cell="1"></div>
+            <div class="cell" data-cell="2"></div>
+            <div class="cell" data-cell="3"></div>
+            <div class="cell" data-cell="4"></div>
+            <div class="cell" data-cell="5"></div>
+            <div class="cell" data-cell="6"></div>
+            <div class="cell" data-cell="7"></div>
+            <div class="cell" data-cell="8"></div>
+            <div class="cell" data-cell="9"></div>
+          </div>
 
+        <div class="winning-message" id="winningMessage">
+          <div data-winning-message-text></div>
+          <button id="restartButton">Play Again!</button>
+        </div>
+      </div> 
+        <!-- container ends -->
+
+        <!-- <div class="scores">
           <div class="row">
-            <div class="col-4 col-md-4 col-lg-4 box">1</div>
-            <div class="col-4 col-md-4 col-lg-4 box">2</div>
-            <div class="col-4 col-md-4 col-lg-4 box">3</div>
-            <div class="col-4 col-md-4 col-lg-4 box">4</div>
-            <div class="col-4 col-md-4 col-lg-4 box">5</div>
-            <div class="col-4 col-md-4 col-lg-4 box">6</div>
-            <div class="col-4 col-md-4 col-lg-4 box">7</div>
-            <div class="col-4 col-md-4 col-lg-4 box">8</div>
-            <div class="col-4 col-md-4 col-lg-4 box">9</div>
+            <div class="col p">
+              <h2>Player - <span class="char">X</span></h2>
+              <u>0</u>
+            </div>
+            <div class="col ties">
+              <h2>Ties</h2>
+              <u>0</u>
+            </div>
+            <div class="col com">
+              <h2>Computer - <span class="char">O</span></h2>
+              <u>0</u>
+            </div>
           </div>
         </div>
-      <!-- <nav class="navbar fixed-top navbar-dark bg-primary">
-        <span class="navbar-brand mb-0 h1">Modal Navbar</span>
-        <button class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target="#myModal">Launch Modal</button>
-      </nav>
+         -->
+        
+      
+    </div>
+        <!-- <nav class="navbar fixed-top navbar-dark bg-primary">
+          <span class="navbar-brand mb-0 h1">Modal Navbar</span>
+          <button class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target="#myModal">Launch Modal</button>
+        </nav>
      
       
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

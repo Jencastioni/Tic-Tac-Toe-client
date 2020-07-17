@@ -20,7 +20,30 @@ const onCreateGame = function (event) {
       .then(ui.gameIndexSuccess)
       .catch(ui.gameIndexFailure)
   }
+
+  const onGameShow = function (event) {
+    event.preventDefault()
+  
+    const form = event.target
+    const formData = getFormFields(form)
+    api.gameShow(formData.game.id)
+      .then(ui.showGameSuccess)
+      .catch(ui.showGameFailure)
+  }
+
+  const onGameUpdate = function (event) {
+    event.preventDefault()
+
+    const form = event.target
+    const formData = getFormFields(form)
+
+    api.gameUpdate(formData)
+        .then(ui.updategameSuccess)
+        .catch(ui.updategameFailure)
+  }
 module.exports = {
     onCreateGame,
     onGameIndex,
+    onGameShow,
+    onGameUpdate
   }

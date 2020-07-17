@@ -36,8 +36,8 @@ const signInSuccess = function (response) {
 
   const signOutSuccess = function () {
     $('#message').text('You have signed out!')
-    $('#unauthenticated').show()
-    $('#authenticated').hide()
+    // $('#unauthenticated').show()
+    // $('#authenticated').hide()
   
     store.user = null
   }

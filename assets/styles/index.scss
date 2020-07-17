@@ -1,28 +1,78 @@
 @import '~bootstrap/scss/bootstrap';
 @import './variables.scss';
 
-$alt-color: $cyan;
-$body-bg-color: $gray-200;
-$font-color: $light;
+// $alt-color: $cyan;
+// $body-bg-color: $gray-200;
+// $font-color: $light;
+
+// body {
+//   background-color: $body-bg-color;
+// }
+
+// .box {
+//   align-items: center;
+//   background-color: $secondary;
+//   border: 1px solid $white;
+//   color: $font-color;
+//   display: flex;
+//   height: 80px;
+//   justify-content: center;
+// }
+
+// .alt-color {
+//   background-color: $alt-color;
+// }
 
 body {
-  background-color: $body-bg-color;
+  margin: 0;
+  background-color: rgba(17, 166, 211, 0.815);
+  font-family: "Arial", sans-serif;
 }
 
-.box {
-  align-items: center;
-  background-color: $secondary;
-  border: 1px solid $white;
-  color: $font-color;
-  display: flex;
-  height: 80px;
+// board {
+//   text-align: center;
+// }
+// .game--container {
+//   display: grid;
+//   grid-template-columns: repeat(3, auto);
+//   width: 306px;
+//   margin: 50px auto;
+// }
+// .cell {
+//   font-family: "Permanent Marker", cursive;
+//   width: 100px;
+//   height: 100px;
+//   box-shadow: 0 0 0 1px #333333;
+//   border: 1px solid #333333;
+//   cursor: pointer;
+// line-height: 100px;
+//   font-size: 60px;
+// }
+.board{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
   justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto)
 }
 
-.alt-color {
-  background-color: $alt-color;
+.cell {
+  width: $cell-size;
+  height: $cell-size;
+  border: 3px solid black;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 60px;
 }
 
-#authenticated {
-  display: none;
-}
+
+// #authenticated {
+//   display: none;
+// }
