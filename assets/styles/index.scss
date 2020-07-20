@@ -1,6 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 @import './variables.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 // $alt-color: $cyan;
 // $body-bg-color: $gray-200;
 // $font-color: $light;
@@ -39,7 +41,7 @@ body {
 //   margin: 50px auto;
 // }
 // .cell {
-//   font-family: "Permanent Marker", cursive;
+//   font-family: Arial, sans-serif;
 //   width: 100px;
 //   height: 100px;
 //   box-shadow: 0 0 0 1px #333333;
@@ -49,14 +51,18 @@ body {
 //   font-size: 60px;
 // }
 .board{
-  width: 100vw;
-  height: 100vh;
+  margin: auto;
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
   display: grid;
   justify-content: center;
   align-content: center;
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(3, auto)
+}
+h1 {
+  justify-content: center;
 }
 
 .cell {
@@ -68,11 +74,65 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  line-height: 100px;
-  font-size: 60px;
+  min-height: calc(100% / 3);
+  font-size: 20vh;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  text-shadow: 5px 5px rgb(97, 97, 97);
+  &:hover {
+    background-color:  rgba(188, 216, 223, 0.815);
+  }
+  user-select: none;
+  
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+  // Select the last 3 elements
+  &:nth-last-child(-1n + 3) {
+    border-bottom: 0;
+  }
+  &:nth-child(3n + 1) {
+    border-left: none;
+  }
+  &:first-child,
+  &:nth-child(2),
+  &:nth-child(3) {
+  border-top: none;
+}
 }
 
+.end-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(132, 51, 169);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 200px;
+  flex-direction: column;
+}
 
+.end-message button {
+  font-size: 3rem;
+  background-color: rgb(132, 51, 169);
+  border: 1px solid black;
+  padding: .25em .5em;
+  cursor: pointer;
+}
+
+.end-message button:hover {
+  background-color: rgb(132, 51, 169);;
+  color: white;
+  border-color: white;
+}
+
+.end-message.show {
+  display: flex;
+}
 // #authenticated {
 //   display: none;
 // }

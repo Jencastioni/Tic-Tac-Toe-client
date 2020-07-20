@@ -18,10 +18,5 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
 
   $('#create-game').on('click', gameEvents.onCreateGame)
-  $('.cell').on('click', gameEvents.onCellClick)
   $('#game-index').on('click', gameEvents.onGameIndex)
-  $('#game-show').on('submit', gameEvents.onGameShow)
-  $('#game-update').on('submit', gameEvents.onGameUpdate)
-
-  $('replay-button').on('click',gameEvents.playGame)
 })
