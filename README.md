@@ -37,4 +37,5 @@ I would like to eventually play against a computer and keep track of "X" wins, "
 
 ## Images: 
 [![My Wireframe:](https://imgur.com/a/SYegofi)] 
+https://imgur.com/a/SYegofi
 
