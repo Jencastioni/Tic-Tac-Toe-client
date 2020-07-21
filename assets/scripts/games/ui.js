@@ -3,7 +3,7 @@
 const store = require("../store")
 const api = require('./api')
 const endMessageElement = document.getElementById('endMessage')
-const replayGame = document.getElementById('replay-Button')
+const replayGame = document.getElementById('replay-game')
 const endMessageTextElement = document.querySelector('[data-end-message-text]')
 
 const createGameSuccess = function (response) {
@@ -32,7 +32,7 @@ const createGameFailure = function (error) {
 
 
 const replayGameSuccess = function (response) {
-  
+  console.log('we are in the replay success function')
     store.game = response.game
     
     $('#message').text('New Game!')
@@ -51,6 +51,7 @@ const replayGameSuccess = function (response) {
     $('.BL').empty()
     $('.BM').empty()
     $('.BR').empty()
+
 }
    
 const replayGameFailure = function (error) {
@@ -90,6 +91,7 @@ const TLSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -103,6 +105,7 @@ const TLSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
@@ -116,6 +119,7 @@ const TLSuccess = function (response) {
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
+            $('.end-message').show()
         } else { 
           $("#message").text("It's " + turn + "'s turn!")
         }
@@ -149,6 +153,7 @@ const TMSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -162,6 +167,7 @@ const TMSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
@@ -175,6 +181,7 @@ const TMSuccess = function (response) {
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
+            $('.end-message').show()
         } else { 
           $("#message").text("It's " + turn + "'s turn!")
         }
@@ -207,6 +214,7 @@ const TRSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -220,6 +228,7 @@ const TRSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
@@ -233,6 +242,7 @@ const TRSuccess = function (response) {
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
+            $('.end-message').show()
         } else { 
           $("#message").text("It's " + turn + "'s turn!")
         }
@@ -265,6 +275,7 @@ const MLSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -278,6 +289,7 @@ const MLSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
@@ -291,6 +303,7 @@ const MLSuccess = function (response) {
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
+            $('.end-message').show()
         } else { 
           $("#message").text("It's " + turn + "'s turn!")
         }
@@ -323,6 +336,7 @@ const MMSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -336,6 +350,7 @@ const MMSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
@@ -349,6 +364,7 @@ const MMSuccess = function (response) {
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
+            $('.end-message').show()
         } else { 
           $("#message").text("It's " + turn + "'s turn!")
         }
@@ -382,6 +398,7 @@ const MRSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -395,6 +412,7 @@ const MRSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
@@ -408,6 +426,7 @@ const MRSuccess = function (response) {
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
+            $('.end-message').show()
         } else { 
           $("#message").text("It's " + turn + "'s turn!")
         }
@@ -440,6 +459,7 @@ const BLSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -453,6 +473,7 @@ const BLSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
@@ -466,6 +487,7 @@ const BLSuccess = function (response) {
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
+            $('.end-message').show()
         } else { 
           $("#message").text("It's " + turn + "'s turn!")
         }
@@ -500,6 +522,7 @@ const BMSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -513,6 +536,7 @@ const BMSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
@@ -526,6 +550,7 @@ const BMSuccess = function (response) {
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
+            $('.end-message').show()
         } else { 
           $("#message").text("It's " + turn + "'s turn!")
         }
@@ -558,6 +583,7 @@ const BRSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
+          $('.end-message').show()
         } else if ((cells[0] === "O" && cells[1] === "O" && cells[2] === "O")
           || (cells[3] === "O" && cells[4] === "O" && cells[5] === "O")
           || (cells[6] === "O" && cells[7] === "O" && cells[8] === "O")
@@ -571,6 +597,7 @@ const BRSuccess = function (response) {
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
+          $('.end-message').show()
         } else if (cells[0] !== "" && cells[1] !== "" && cells[2] !== ""
           && cells[3] !== ""  && cells[4] !== ""  && cells[5] !==""
           && cells[6] !== ""  && cells[7] !== ""  && cells[8] !==""
