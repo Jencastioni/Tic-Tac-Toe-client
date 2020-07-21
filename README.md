@@ -3,7 +3,7 @@
 This Tic-Tac-Toe game allows the user to do just that, play Tic-Tac-Toe! It is a single-page web application where a user must sign up or log in to play.
 
 ## Important Links:
--   [![Deployed Tic-Tac-Toe API](https://jencastioni.github.io/jen-castioni-tic-tac-toe-client/)] 
+-   [![Deployed Tic-Tac-Toe API](https://jencastioni.github.io/Tic-Tac-Toe-client/)] 
 -   [![Tic-Tac-Toe Repository](https://github.com/Jencastioni/Tic-Tac-Toe-client)]
 
 ## Planning Story:
