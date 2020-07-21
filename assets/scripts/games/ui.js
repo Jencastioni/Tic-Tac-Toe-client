@@ -32,7 +32,6 @@ const createGameFailure = function (error) {
 
 
 const replayGameSuccess = function (response) {
-  console.log('we are in the replay success function')
     store.game = response.game
     
     $('#message').text('New Game!')
@@ -67,7 +66,6 @@ const gamesPlayedFailure = function (error) {
     $('#message').text('Game History Failed to Load :(')
   }
 
-
 const TLSuccess = function (response) {
   store.game.cells[0] = response.game.cells[0]
     $('.TL').text(response.game.cells[0])
@@ -87,7 +85,7 @@ const TLSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -101,7 +99,7 @@ const TLSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+          
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -115,7 +113,7 @@ const TLSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+         
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
@@ -124,7 +122,6 @@ const TLSuccess = function (response) {
           $("#message").text("It's " + turn + "'s turn!")
         }
 }
-
 
 const TLFailure = function (error) {
   $('#message').text('Failed')
@@ -149,7 +146,7 @@ const TMSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+       
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -163,7 +160,7 @@ const TMSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+          
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -177,7 +174,7 @@ const TMSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+          
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
@@ -210,7 +207,7 @@ const TRSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+       
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -224,7 +221,7 @@ const TRSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+          
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -238,7 +235,7 @@ const TRSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+          
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
@@ -271,7 +268,7 @@ const MLSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -285,7 +282,7 @@ const MLSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+         
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -299,7 +296,7 @@ const MLSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+         
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
@@ -332,7 +329,7 @@ const MMSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -346,7 +343,7 @@ const MMSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -360,7 +357,7 @@ const MMSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+         
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
@@ -394,7 +391,7 @@ const MRSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+       
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -408,7 +405,7 @@ const MRSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+          
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -422,7 +419,7 @@ const MRSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+          
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
@@ -455,7 +452,7 @@ const BLSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -469,7 +466,7 @@ const BLSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -483,7 +480,7 @@ const BLSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+          
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
@@ -501,7 +498,6 @@ const BLFailure = function (error) {
 const BMSuccess = function (response) {
   store.game.cells[7] = response.game.cells[7]
     $('.BM').text(response.game.cells[7])
-    console.log(response)
     let turn = store.player
     if (turn === "O") {
       turn = "X"
@@ -518,7 +514,7 @@ const BMSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -532,7 +528,7 @@ const BMSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -546,7 +542,7 @@ const BMSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+          
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'
@@ -579,7 +575,7 @@ const BRSuccess = function (response) {
       || (cells[0] === "X" && cells[4] === "X" && cells[8] === "X")
       || (cells[2] === "X" && cells[4] === "X" && cells[6] === "X")
         ){
-        // $('.board').hide()
+        
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'X wins!'
@@ -593,7 +589,7 @@ const BRSuccess = function (response) {
           || (cells[0] === "O" && cells[4] === "O" && cells[8] === "O")
           || (cells[2] === "O" && cells[4] === "O" && cells[6] === "O")
           ){
-          // $('.board').hide()
+       
           endMessageElement.classList.add('show')
           store.game.over = true
           endMessageTextElement.innerText = 'O wins!'
@@ -607,7 +603,7 @@ const BRSuccess = function (response) {
           && cells[0] !== ""  && cells[4] !== ""  && cells[8] !==""
           && cells[2] !== ""  && cells[4] !== ""  && cells[6] !==""
           ){
-          // $('.board').hide()
+        
             endMessageElement.classList.add('show')
             store.game.over = true
             endMessageTextElement.innerText = 'Tie!'

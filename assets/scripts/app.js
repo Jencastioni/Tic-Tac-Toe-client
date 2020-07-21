@@ -7,7 +7,7 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
-console.log('authEvents are', authEvents)
+
 
 const gameEvents = require('./games/events')
 
@@ -18,7 +18,8 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
 
   $('#create-game').on('click', gameEvents.onCreateGame)
-  
+  $('#games-played').on('click', gameEvents.onGamesPlayed)
+  $('#replay-game').on('click', gameEvents.onReplayGame)
 
   $('.TL').on('click', gameEvents.onTL)
   $('.TM').on('click', gameEvents.onTM)
@@ -29,9 +30,4 @@ $(() => {
   $('.BL').on('click', gameEvents.onBL)
   $('.BM').on('click', gameEvents.onBM)
   $('.BR').on('click', gameEvents.onBR)
-
-
-  $('#games-played').on('click', gameEvents.onGamesPlayed)
-
-  $('#replay-game').on('click', gameEvents.onReplayGame)
 })

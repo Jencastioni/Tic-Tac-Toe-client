@@ -217,8 +217,6 @@ store.player = "O"
     })
   }
 
- 
-
 const gamesPlayed= function () {
     return $.ajax({
       url: config.apiUrl + '/games',
@@ -228,39 +226,6 @@ const gamesPlayed= function () {
       },
     })
   }
-
-  // const playGame = function(){
-  //   return $.ajax({
-  //     url: config.apiUrl + '/games/' + store.game._id,
-  //     method: "PATCH",
-  //     headers:{
-  //       id: store.game._id,
-  //       Authorization: 'Bearer ' + store.user.token
-  //     },
-  //     data: {
-  //       game:{
-  //         cell: {
-  //           index: $('#playGame').attr('data-cell-index'),
-  //           value: store.player 
-  //         },
-  //         over: false
-  //       }
-  //     }
-  //   })
-  // }
-
-  // const cellClick = function () {
-  //   return $.ajax({
-  //     url: config.apiUrl,
-  //     headers: {
-  //       Authorization: 'Bearer ' + store.user.token,
-  //       data: '{}'
-  //     },
-  //     data: {} 
-  //   })
-  // }
-
-
 
   module.exports = {
     createGame,

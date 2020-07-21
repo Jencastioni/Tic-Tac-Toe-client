@@ -10,108 +10,23 @@ const onCreateGame = function (event) {
     api.createGame()
       .then(ui.createGameSuccess)
       .catch(ui.createGameFailure)
-  }
+}
 
-  const onReplayGame = function (event) {
+const onReplayGame = function (event) {
     
     event.preventDefault()
     api.replayGame()
       .then(ui.replayGameSuccess)
       .catch(ui.replayGameFailure)
-  }
+}
 
-  const onGamesPlayed = function (event) {
+const onGamesPlayed = function (event) {
     event.preventDefault()
     api.gamesPlayed()
         .then(ui.gamesPlayedSuccess)
         .catch(ui.gamesPlayedFailure)
-  }
+}
  
-
-
-  // const onCellClick = function (event) {
-  //   event.preventDefault()
-  //   $(event.target).text(currentPlayer)
-  //   if (currentPlayer === "X") {
-  //     currentPlayer = "O"
-  //   } else if (currentPlayer === "O") {
-  //     currentPlayer = "X"
-  //   } else if (spaceIsEmpty) {
-  //     (cell === currentPlayer)
-  //   } else {
-  //     $('#message').text('Invalid Move')
-  //   }
-  // } 
-
-  // const onCellClick = function (event) {
-  //   $(event.target).text(currentPlayer)
-  //   console.log($(".TM").attr("data-cell"))
-  //   if (currentPlayer === "X") {
-  //     currentPlayer = "O"
-  //   } else if (currentPlayer === "O") {
-  //     currentPlayer = "X"
-  //   } else if (spaceIsEmpty) {
-  //     (cell === currentPlayer)
-  //   } else {
-  //     $("#message").text("Invalid Move")
-  //   }
-  // } 
-
-  // // use event.target to single out specific cell when clicked for "X"
-  // // use conditions to differentiate between x & o later
-
-  // let currentPlayer = "X"
-  // use event.target to single out specific cell when clicked for "X"
-  // use conditions to differentiate between x & o later
-
-  // let currentPlayer = "X" 
-  // const onCellClick = function (event) {
-  //   event.preventDefault()
-  //   $(event.target).text(currentPlayer)
-  //   if (spaceIsEmpty) {
-      
-  //   if (currentPlayer === "X") {
-  //     currentPlayer = "O"
-  //     cell === currentPlayer
-  //   } else  {
-  //     currentPlayer = "X"
-  //     cell === currentPlayer)
-  //   } 
-    
-  //   } else {
-  //     $('#message').text('Invalid Move')
-  //   }
-  // } 
-
-
-//   if (spaceIsEmpty) {
-    
-//   if (currentPlayer === "X") {
-//     currentPlayer = "O"
-//     cell === currentPlayer
-//   } else  {
-//     currentPlayer = "X"
-//     cell === currentPlayer
-//   } 
-  
-//   } else {
-//     $('#message').text('Invalid Move')
-//   }
-// } 
-
-   // const onCellClick = function (event) {
-  //   $(event.target).text(currentPlayer)
-  //   console.log($(".TM").attr("data-cell"))
-  //   if (currentPlayer === "X") {
-  //     currentPlayer = "O"
-  //   } else if (currentPlayer === "O") {
-  //     currentPlayer = "X"
-  //   } else if (spaceIsEmpty) {
-  //     (cell === currentPlayer)
-  //   } else {
-  //     $("#message").text("Invalid Move")
-  //   }
-  // } 
 const onTL = function () {
   event.preventDefault()
   if ($(".TL").text() === "") {
@@ -122,7 +37,6 @@ const onTL = function () {
   } else {
     $("#message").text("Invalid Move")
   }
-  console.log(store.game)
 }
 
 const onTM = function () {

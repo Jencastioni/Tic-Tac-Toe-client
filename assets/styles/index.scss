@@ -5,27 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
-// $alt-color: $cyan;
-// $body-bg-color: $gray-200;
-// $font-color: $light;
 
-// body {
-//   background-color: $body-bg-color;
-// }
-
-// .box {
-//   align-items: center;
-//   background-color: $secondary;
-//   border: 1px solid $white;
-//   color: $font-color;
-//   display: flex;
-//   height: 80px;
-//   justify-content: center;
-// }
-
-// .alt-color {
-//   background-color: $alt-color;
-// }
 
 body {
   margin: 0; 
@@ -64,9 +44,7 @@ p {
   color: white;
   text-shadow: 3px 3px rgb(97, 97, 97);
   margin: 1em;
-
 }
-
 
 .cell {
   width: $cell-size;
@@ -105,11 +83,6 @@ p {
   }
 }
 
-// h2 {
-//   justify-content: center;
-//   text-align: center;
-// }
-
 .end-message {
   display: none;
   position: fixed;
@@ -144,7 +117,6 @@ p {
   background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
 }
 
-
 .end-message.hide {
   display: none;
 }
@@ -174,8 +146,8 @@ p {
   background-color: rgba(17, 166, 211, 0.815);
   background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
   }
-
 }
+
 #games-played{
   padding: .5em 2em;
   color: white;
@@ -191,7 +163,6 @@ p {
   }
 }
 
-
 #login {
   border: 5px solid white;
   display: block;
@@ -203,7 +174,6 @@ p {
   color: rgb(132, 51, 169);
   cursor: pointer;
   font-family: 'Bubblegum Sans', cursive;
-
 }
 
 #sign-in button {
@@ -217,7 +187,6 @@ p {
     background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
   }
 }
-
 
 #sign-up {
   font-size: 1.5em;
@@ -283,4 +252,3 @@ p {
   display: none;
 }
 
-// font-family: 'Londrina Outline', cursive;
