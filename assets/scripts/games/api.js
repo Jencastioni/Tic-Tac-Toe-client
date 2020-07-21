@@ -14,6 +14,15 @@ const createGame = function () {
   })
 }
 
+const replayGame = function () {
+  return $.ajax ({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 
 store.player = "O" 
 
@@ -210,8 +219,6 @@ store.player = "O"
 
  
 
-
-
 const gamesPlayed= function () {
     return $.ajax({
       url: config.apiUrl + '/games',
@@ -219,7 +226,6 @@ const gamesPlayed= function () {
       headers: {
         Authorization: 'Bearer ' + store.user.token
       },
-
     })
   }
 
@@ -258,6 +264,7 @@ const gamesPlayed= function () {
 
   module.exports = {
     createGame,
+    replayGame,
     gamesPlayed,
     value,
     TL,

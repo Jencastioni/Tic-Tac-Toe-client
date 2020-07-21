@@ -3,18 +3,20 @@
 const store = require('../store')
 
 const signUpSuccess = function () {
-    $('#message').text('Successfully Signed Up!')
+    $('#message').text('You Created an Account!')
+    $('.board').hide()
 }
 
 const signUpFailure = function () {
-    $('#message').text('Sign Up Failed :(')
+    $('#message').text('Make Sure Both Passwords Match!')
 }
 
 
 const signInSuccess = function (response) {
    store.user = response.user  
-   $('#message').text('Sign in Success!')
-    
+   $('#message').text('You Have Signed In! Welcome!')
+   $('.board').hide()
+
     $('#authenticated').show()
     $('#unauthenticated').hide()
   }
@@ -25,24 +27,26 @@ const signInSuccess = function (response) {
   
 
   const changePasswordSuccess = function () {
-    $('#message').text('Change Password Success!')
+    $('#message').text('Your Password has Been Changed!')
+    $('#authenticated').show()
+    $('#unauthenticated').hide()
   }
   
   const changePasswordFailure = function () {
-    $('#message').text('Change Password Failed :(')
+    $('#message').text('Unable to Change Password :( ')
   }
   
 
   const signOutSuccess = function () {
-    $('#message').text('You have signed out!')
-    // $('#unauthenticated').show()
-    // $('#authenticated').hide()
+    $('#message').text('See You Soon!')
+    $('#unauthenticated').show()
+    $('#authenticated').hide()
   
     store.user = null
   }
   
   const signOutFailure = function () {
-    $('#message').text('Sign out failed :(')
+    $('#message').text('Unable to Sign Out :(')
   }
   
   module.exports = {

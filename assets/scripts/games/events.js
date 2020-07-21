@@ -12,50 +12,21 @@ const onCreateGame = function (event) {
       .catch(ui.createGameFailure)
   }
 
-//   const onGameIndex = function (event) {
-//     api.gameIndex()
-//       .then(ui.gameIndexSuccess)
-//       .catch(ui.gameIndexFailure) 
-//   }
-
-//   const onGameShow = function (event) {
-//     event.preventDefault()
-  
-//     const form = event.target
+  const onReplayGame = function (event) {
     
-//     api.gameShow(form.game.id)
-//       .then(ui.showGameSuccess)
-//       .catch(ui.showGameFailure)
-//   }
+    event.preventDefault()
+    api.replayGame()
+      .then(ui.replayGameSuccess)
+      .catch(ui.replayGameFailure)
+  }
 
   const onGamesPlayed = function (event) {
     event.preventDefault()
-    api.gameUpdate()
+    api.gamesPlayed()
         .then(ui.gamesPlayedSuccess)
         .catch(ui.gamesPlayedFailure)
   }
-
-//   const winCombo = [
-//     [0, 1, 2],
-//     [3, 4, 5],
-//     [6, 7, 8],
-//     [0, 3, 6],
-//     [1, 4, 7],
-//     [2, 5, 8],
-//     [0, 4, 8],
-//     [2, 4, 6]
-//   ]
-//   // set array = by index not by #
-  
  
-
-//   const onPlayGame = function () {
-//     cellElements.forEach(cell => {
-//     cell.classList.remove(currentPlayer)
-//     cell.removeEventListener('click', clickHandler)
-//     cell.addEventListener('click', clickHandler, { once: true })
-//   })
-// }
 
 
   // const onCellClick = function (event) {
@@ -112,9 +83,6 @@ const onCreateGame = function (event) {
   //   }
   // } 
 
-  
-      
-
 
 //   if (spaceIsEmpty) {
     
@@ -130,17 +98,6 @@ const onCreateGame = function (event) {
 //     $('#message').text('Invalid Move')
 //   }
 // } 
- 
-
-
-
-  // function updateScores() {
-      
-  //   $scores.find('.x').find('u').html(scores.x);
-  //   $scores.find('.ties').find('u').html(scores.ties);
-  //   $scores.find('.o').find('u').html(scores.o);
-    
-  // } 
 
    // const onCellClick = function (event) {
   //   $(event.target).text(currentPlayer)
@@ -176,7 +133,7 @@ const onTM = function () {
       .then(ui.TMSuccess)
       .catch(ui.TMFailure)
   } else {
-    $("#message").text("Invalid Move")
+    $("#message").text("Nope")
   }
 }
 
@@ -188,7 +145,7 @@ const onTR = function () {
       .then(ui.TRSuccess)
       .catch(ui.TRFailure)
   } else {
-    $("#message").text("Invalid Move")
+    $("#message").text("I don't think so")
   }
 }
 
@@ -200,7 +157,7 @@ const onML = function () {
       .then(ui.MLSuccess)
       .catch(ui.MLFailure)
   } else {
-    $("#message").text("Invalid Move")
+    $("#message").text("No dice")
   }
 }
 
@@ -212,7 +169,7 @@ const onMM = function () {
       .then(ui.MMSuccess)
       .catch(ui.MMFailure)
   } else {
-    $("#message").text("Invalid Move")
+    $("#message").text("Not here")
   }
 }
 
@@ -224,7 +181,7 @@ const onMR = function () {
       .then(ui.MRSuccess)
       .catch(ui.MRFailure)
   } else {
-    $("#message").text("Invalid Move")
+    $("#message").text("Can't do it")
   }
 }
 
@@ -236,7 +193,7 @@ const onBL = function () {
       .then(ui.BLSuccess)
       .catch(ui.BLFailure)
   } else {
-    $("#message").text("Invalid Move")
+    $("#message").text("Try Again")
   }
 }
 
@@ -248,7 +205,7 @@ const onBM = function () {
       .then(ui.BMSuccess)
       .catch(ui.BMFailure)
   } else {
-    $("#message").text("Invalid Move")
+    $("#message").text("The position has been filled")
   }
 }
 
@@ -260,18 +217,14 @@ const onBR = function () {
       .then(ui.BRSuccess)
       .catch(ui.BRFailure)
   } else {
-    $("#message").text("Invalid Move")
+    $("#message").text("Not here either")
   }
 }
 
 module.exports = {
     onCreateGame,
-    // onGameIndex,
-    // onGameShow,
     onGamesPlayed,
-    // onPlayGame,
-    // onCellClick,
-    // updateScores,
+    onReplayGame,
     onTL,
     onTM,
     onTR,

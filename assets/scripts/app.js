@@ -18,9 +18,7 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
 
   $('#create-game').on('click', gameEvents.onCreateGame)
-  // $('#new-game').on('click', function(){
-  //   $('.board').show()
-  // })
+  
 
   $('.TL').on('click', gameEvents.onTL)
   $('.TM').on('click', gameEvents.onTM)
@@ -33,8 +31,7 @@ $(() => {
   $('.BR').on('click', gameEvents.onBR)
 
 
-  
-  $('#games-played').on('submit', gameEvents.onGamesPlayed)
+  $('#games-played').on('click', gameEvents.onGamesPlayed)
 
-  $('#replay-button').on('click', gameEvents.onPlayGame)
+  $('#replay-game').on('click', gameEvents.onReplayGame)
 })

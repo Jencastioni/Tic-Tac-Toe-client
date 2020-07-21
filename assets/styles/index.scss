@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 // $alt-color: $cyan;
 // $body-bg-color: $gray-200;
 // $font-color: $light;
@@ -26,30 +28,12 @@
 // }
 
 body {
-  margin: 0;
+  margin: 0; 
   background-color: rgba(17, 166, 211, 0.815);
+  background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
   font-family: "Arial", sans-serif;
 }
 
-// board {
-//   text-align: center;
-// }
-// .game--container {
-//   display: grid;
-//   grid-template-columns: repeat(3, auto);
-//   width: 306px;
-//   margin: 50px auto;
-// }
-// .cell {
-//   font-family: Arial, sans-serif;
-//   width: 100px;
-//   height: 100px;
-//   box-shadow: 0 0 0 1px #333333;
-//   border: 1px solid #333333;
-//   cursor: pointer;
-// line-height: 100px;
-//   font-size: 60px;
-// }
 .board{
   margin: auto;
   max-height: calc(100vh - 75px);
@@ -61,9 +45,28 @@ body {
   align-items: center;
   grid-template-columns: repeat(3, auto)
 }
+
 h1 {
+  margin: 10px;
+  padding: 20px;
   justify-content: center;
+  text-align: center;
+  font-family: 'Londrina Outline', cursive;
+  color: white;
+  font-size: 150px;
+  text-shadow: 7px 7px rgb(132, 51, 169);
 }
+
+p {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 50px;
+  color: white;
+  text-shadow: 3px 3px rgb(97, 97, 97);
+  margin: 1em;
+
+}
+
 
 .cell {
   width: $cell-size;
@@ -80,7 +83,8 @@ h1 {
   color: white;
   text-shadow: 5px 5px rgb(97, 97, 97);
   &:hover {
-    background-color:  rgba(188, 216, 223, 0.815);
+    background-color:  rgba(17, 166, 211, 0.815);
+    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
   }
   user-select: none;
 
@@ -101,9 +105,10 @@ h1 {
   }
 }
 
-.scores {
-  justify-content: center;
-}
+// h2 {
+//   justify-content: center;
+//   text-align: center;
+// }
 
 .end-message {
   display: none;
@@ -113,30 +118,169 @@ h1 {
   right: 0;
   bottom: 0;
   background-color: rgb(132, 51, 169);
+  background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 200px;
   flex-direction: column;
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 .end-message button {
   font-size: 3rem;
   background-color: rgb(132, 51, 169);
-  border: 1px solid black;
+  border: 3px solid white;
   padding: .25em .5em;
+  color: white;
   cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 .end-message button:hover {
-  background-color: rgb(132, 51, 169);;
-  color: white;
-  border-color: white;
+  color: black;
+  border-color: rgb(132, 51, 169);
+  background-color: rgba(17, 166, 211, 0.815);
+  background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+}
+
+
+.end-message.hide {
+  display: none;
 }
 
 .end-message.show {
   display: flex;
 }
-// #authenticated {
-//   display: none;
-// }
+
+.game-buttons {
+  justify-content: center;
+  text-align: center;
+  padding: .5em .25em;
+  margin: .5em .25em;
+  font-size: 1.75em;
+}
+
+#create-game {
+  padding: .5em 2em;
+  color: white;
+  background-color: rgb(132, 51, 169);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+  border: 3px solid white;
+  &:hover {
+  color: black;
+  border-color: rgb(132, 51, 169);
+  background-color: rgba(17, 166, 211, 0.815);
+  background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  }
+
+}
+#games-played{
+  padding: .5em 2em;
+  color: white;
+  background-color: rgb(132, 51, 169);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+  border: 3px solid white;
+  &:hover {
+    color: black;
+    border-color: rgb(132, 51, 169);
+    background-color: rgba(17, 166, 211, 0.815);
+    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  }
+}
+
+
+#login {
+  border: 5px solid white;
+  display: block;
+}
+
+#sign-in {
+  font-size: 1.5em;
+  padding: .5em .25em;
+  color: rgb(132, 51, 169);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+
+}
+
+#sign-in button {
+  color: white;
+  background-color: rgb(132, 51, 169);
+  border: 2px solid white;
+  &:hover {
+    color: black;
+    border-color: rgb(132, 51, 169);
+    background-color: rgba(17, 166, 211, 0.815);
+    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  }
+}
+
+
+#sign-up {
+  font-size: 1.5em;
+  padding: .5em .25em;
+  color: rgb(132, 51, 169);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+#sign-up button {
+  color: white;
+  background-color: rgb(132, 51, 169);
+  border: 2px solid white;
+  &:hover {
+    color: black;
+    border-color: rgb(132, 51, 169);
+    background-color: rgba(17, 166, 211, 0.815);
+    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  }
+}
+
+#sign-out {
+  font-size: 1.5em;
+  padding: .5em .25em;
+  color: rgb(132, 51, 169);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+#sign-out button {
+  color: white;
+  background-color: rgb(132, 51, 169);
+  border: 2px solid white;
+  &:hover {
+    color: black;
+    border-color: rgb(132, 51, 169);
+    background-color: rgba(17, 166, 211, 0.815);
+    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  }
+}
+
+#change-password {
+  font-size: 1.5em;
+  padding: .5em .25em;
+  color: rgb(132, 51, 169);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+#change-password button {
+  color: white;
+  background-color: rgb(132, 51, 169);
+  border: 2px solid white;
+  &:hover {
+    color: black;
+    border-color: rgb(132, 51, 169);
+    background-color: rgba(17, 166, 211, 0.815);
+    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  }
+}
+
+#authenticated {
+  display: none;
+}
+
+// font-family: 'Londrina Outline', cursive;
