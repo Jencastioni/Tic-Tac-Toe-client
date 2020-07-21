@@ -3,8 +3,8 @@
 This Tic-Tac-Toe game allows the user to do just that, play Tic-Tac-Toe! It is a single-page web application where a user must sign up or log in to play.
 
 ## Important Links:
--   [![Deployed Tic-Tac-Toe API](https://jencastioni.github.io/Tic-Tac-Toe-client/)] 
--   [![Tic-Tac-Toe Repository](https://github.com/Jencastioni/Tic-Tac-Toe-client)]
+-   [[Deployed Tic-Tac-Toe API](https://jencastioni.github.io/Tic-Tac-Toe-client/)] 
+-   [[Tic-Tac-Toe Repository](https://github.com/Jencastioni/Tic-Tac-Toe-client)]
 
 ## Planning Story:
 General Assembly's SEI program assigned a Tic-Tac-Toe game for our very first project and therefore required quite a bit of planning.
@@ -36,6 +36,6 @@ The following technologies were used to produce my application:
 I would like to eventually play against a computer and keep track of "X" wins, "O" wins and Ties.
 
 ## Images: 
-[![My Wireframe:](https://imgur.com/a/SYegofi)] 
+[[My Wireframe:](https://imgur.com/a/SYegofi)] 
 https://imgur.com/a/SYegofi
 
