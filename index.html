@@ -45,7 +45,7 @@
 
         <button id="create-game">New Game</button>
 
-        <button id="game-index">Games Played</button>
+        <!-- <button id="game-played">Games Played</button> -->
 
         <div id="content"></div> 
           <!-- come back to CONTENT -->
@@ -54,9 +54,9 @@
           <button type="submit">New Game</button>
         </form> -->
 
-        <!-- <form id="games-played">
-          <button type="submit">Games Played</button>
-        </form> -->
+        
+        <button type="submit" id="games-played">Games Played</button>
+        
         
         <div class="wrapper"></div>
   
@@ -74,15 +74,15 @@
       <div class="container">
         <h1>Tic Tac Toe</h1>
           <div class="board" id="board">
-            <div class="cell" data-cell="1"></div>
-            <div class="cell" data-cell="2"></div>
-            <div class="cell" data-cell="3"></div>
-            <div class="cell" data-cell="4"></div>
-            <div class="cell" data-cell="5"></div>
-            <div class="cell" data-cell="6"></div>
-            <div class="cell" data-cell="7"></div>
-            <div class="cell" data-cell="8"></div>
-            <div class="cell" data-cell="9"></div>
+            <div class="cell TL" data-cell="0"></div>
+            <div class="cell TM" data-cell="1"></div>
+            <div class="cell TR" data-cell="2"></div>
+            <div class="cell ML" data-cell="3"></div>
+            <div class="cell MM" data-cell="4"></div>
+            <div class="cell MR" data-cell="5"></div>
+            <div class="cell BL" data-cell="6"></div>
+            <div class="cell BM" data-cell="7"></div>
+            <div class="cell BR" data-cell="8"></div>
           </div>
 
         <div class="end-message" id="endMessage">
@@ -91,7 +91,22 @@
         </div>
       </div> 
         <!-- container ends -->
-
+        <div class="scores">
+          <div class="row">
+            <div class="column x">
+              <h2>Player 1 - <span class="char">X</span></h2>
+              <u>0</u>
+            </div>
+            <div class="column ties">
+              <h2>Ties</h2>
+              <u>0</u>
+            </div>
+            <div class="column o">
+              <h2>Player 2 - <span class="char">O</span></h2>
+              <u>0</u>
+            </div>
+          </div>
+        </div>
         
          -->
         

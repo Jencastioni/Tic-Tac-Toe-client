@@ -83,7 +83,7 @@ h1 {
     background-color:  rgba(188, 216, 223, 0.815);
   }
   user-select: none;
-  
+
   &:nth-child(3n) {
     border-right: 0;
   }
@@ -98,7 +98,11 @@ h1 {
   &:nth-child(2),
   &:nth-child(3) {
   border-top: none;
+  }
 }
+
+.scores {
+  justify-content: center;
 }
 
 .end-message {

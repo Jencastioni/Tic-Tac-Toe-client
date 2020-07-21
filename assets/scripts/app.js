@@ -18,10 +18,23 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
 
   $('#create-game').on('click', gameEvents.onCreateGame)
-  $('.cell').on('click', gameEvents.onCellClick)
-  $('#game-index').on('click', gameEvents.onGameIndex)
-  $('#game-show').on('submit', gameEvents.onGameShow)
-  $('#game-update').on('submit', gameEvents.onGameUpdate)
+  // $('#new-game').on('click', function(){
+  //   $('.board').show()
+  // })
 
-  $('replay-button').on('click',gameEvents.playGame)
+  $('.TL').on('click', gameEvents.onTL)
+  $('.TM').on('click', gameEvents.onTM)
+  $('.TR').on('click', gameEvents.onTR)
+  $('.ML').on('click', gameEvents.onML)
+  $('.MM').on('click', gameEvents.onMM)
+  $('.MR').on('click', gameEvents.onMR)
+  $('.BL').on('click', gameEvents.onBL)
+  $('.BM').on('click', gameEvents.onBM)
+  $('.BR').on('click', gameEvents.onBR)
+
+
+  
+  $('#games-played').on('submit', gameEvents.onGamesPlayed)
+
+  $('#replay-button').on('click', gameEvents.onPlayGame)
 })

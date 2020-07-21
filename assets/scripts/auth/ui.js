@@ -12,10 +12,9 @@ const signUpFailure = function () {
 
 
 const signInSuccess = function (response) {
-    $('#message').text('Sign in Success!')
-    console.log(store)
+   store.user = response.user  
+   $('#message').text('Sign in Success!')
     
-    store.user = response.user
     $('#authenticated').show()
     $('#unauthenticated').hide()
   }
