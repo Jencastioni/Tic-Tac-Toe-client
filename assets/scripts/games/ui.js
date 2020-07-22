@@ -59,7 +59,7 @@ const replayGameFailure = function (error) {
 
 
 const gamesPlayedSuccess = function (response) {
-    $('#message').text(response.games.length)
+    $('#message').text(response.games.length + ' Games Played!')
 }
       
 const gamesPlayedFailure = function (error) {
