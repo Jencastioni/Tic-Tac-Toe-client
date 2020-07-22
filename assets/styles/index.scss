@@ -165,7 +165,7 @@ p {
 }
 
 #login {
-  border: 3px solid rgb(132, 51, 169);
+  border: 3px solid white;
   display: block;
   background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815), rgba(17, 166, 211, 0.815), rgb(112, 115, 227));
 }
@@ -249,7 +249,6 @@ p {
     background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
 }
-
 
 #authenticated {
   display: none;
