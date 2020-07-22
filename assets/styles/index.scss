@@ -10,7 +10,7 @@
 body {
   margin: 0; 
   background-color: rgba(17, 166, 211, 0.815);
-  background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  background: linear-gradient(to right, rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   font-family: "Arial", sans-serif;
 }
 
@@ -40,10 +40,10 @@ h1 {
 p {
   text-align: center;
   font-family: 'Nunito', sans-serif;
-  font-size: 50px;
+  font-size: 75px;
   color: white;
-  text-shadow: 3px 3px rgb(97, 97, 97);
-  margin: 1em;
+  text-shadow: 5px 5px rgb(97, 97, 97);
+  margin: .5em;
 }
 
 .cell {
@@ -59,10 +59,10 @@ p {
   font-size: 20vh;
   font-family: 'Nunito', sans-serif;
   color: white;
-  text-shadow: 5px 5px rgb(97, 97, 97);
+  text-shadow: 6px 6px rgb(97, 97, 97);
   &:hover {
     background-color:  rgba(17, 166, 211, 0.815);
-    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+    background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
   user-select: none;
 
@@ -97,7 +97,7 @@ p {
   color: white;
   font-size: 200px;
   flex-direction: column;
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: 'Bubblegum Sans', sans-serif;
 }
 
 .end-message button {
@@ -114,7 +114,7 @@ p {
   color: black;
   border-color: rgb(132, 51, 169);
   background-color: rgba(17, 166, 211, 0.815);
-  background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
 }
 
 .end-message.hide {
@@ -144,7 +144,7 @@ p {
   color: black;
   border-color: rgb(132, 51, 169);
   background-color: rgba(17, 166, 211, 0.815);
-  background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+  background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
 }
 
@@ -159,13 +159,14 @@ p {
     color: black;
     border-color: rgb(132, 51, 169);
     background-color: rgba(17, 166, 211, 0.815);
-    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+    background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
 }
 
 #login {
-  border: 5px solid white;
+  border: 3px solid rgb(132, 51, 169);
   display: block;
+  background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815), rgba(17, 166, 211, 0.815), rgb(112, 115, 227));
 }
 
 #sign-in {
@@ -184,7 +185,7 @@ p {
     color: black;
     border-color: rgb(132, 51, 169);
     background-color: rgba(17, 166, 211, 0.815);
-    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+    background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
 }
 
@@ -204,7 +205,7 @@ p {
     color: black;
     border-color: rgb(132, 51, 169);
     background-color: rgba(17, 166, 211, 0.815);
-    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+    background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
 }
 
@@ -224,7 +225,7 @@ p {
     color: black;
     border-color: rgb(132, 51, 169);
     background-color: rgba(17, 166, 211, 0.815);
-    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+    background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
 }
 
@@ -244,11 +245,11 @@ p {
     color: black;
     border-color: rgb(132, 51, 169);
     background-color: rgba(17, 166, 211, 0.815);
-    background: linear-gradient(to right, rgba(17, 166, 211, 0.815), rgb(112, 115, 227), rgba(17, 166, 211, 0.815));
+    background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
 }
+
 
 #authenticated {
   display: none;
 }
-
