@@ -16,6 +16,7 @@ body {
 
 .board{
   margin: auto;
+  padding-bottom: 4em;
   max-height: calc(100vh - 75px);
   max-width: calc(100vh - 75px);
   display: grid;
