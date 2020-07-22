@@ -1,11 +1,11 @@
-# Jen Castioni's Tic Tac Toe Game
+# Jen Castioni's Tic-Tac-Toe Game
 
 This Tic-Tac-Toe game allows the user to do just that, play Tic-Tac-Toe! It is a single-page web application where a user must sign up or log in to play.
 
 ## Important Links:
--   [[Deployed Tic-Tac-Toe API](https://jencastioni.github.io/Tic-Tac-Toe-client/)] 
+-   [[ Tic-Tac-Toe](https://jencastioni.github.io/Tic-Tac-Toe-client/)] 
 -   [[Tic-Tac-Toe Repository](https://github.com/Jencastioni/Tic-Tac-Toe-client)]
-
+-   [[Requirements](https://git.generalassemb.ly/ga-wdi-boston/game-project/blob/master/requirements.md)]
 ## Planning Story:
 General Assembly's SEI program assigned a Tic-Tac-Toe game for our very first project and therefore required quite a bit of planning.
 

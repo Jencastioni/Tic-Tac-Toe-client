@@ -13,7 +13,6 @@ const onCreateGame = function (event) {
 }
 
 const onReplayGame = function (event) {
-    
     event.preventDefault()
     api.replayGame()
       .then(ui.replayGameSuccess)

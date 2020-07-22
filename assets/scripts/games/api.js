@@ -25,7 +25,6 @@ const replayGame = function () {
 }
 
 store.player = "O" 
-
   const value = function () {
     if (store.player  === "X") {
       store.player  = "O"
