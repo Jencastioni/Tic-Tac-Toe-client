@@ -3,11 +3,11 @@
 This Tic-Tac-Toe game allows the user to do just that, play Tic-Tac-Toe! It is a single-page web application where a user must sign up or log in to play.
 
 ## Important Links:
--   [[ Tic-Tac-Toe](https://jencastioni.github.io/Tic-Tac-Toe-client/)] 
+-   [[Tic-Tac-Toe](https://jencastioni.github.io/Tic-Tac-Toe-client/)] 
 -   [[Tic-Tac-Toe Repository](https://github.com/Jencastioni/Tic-Tac-Toe-client)]
 -   [[Requirements](https://git.generalassemb.ly/ga-wdi-boston/game-project/blob/master/requirements.md)]
 ## Planning Story:
-General Assembly's SEI program assigned a Tic-Tac-Toe game for our very first project and therefore required quite a bit of planning.
+This Tic-Tac-Toe game was our very first project and therefore required quite a bit of planning.
 
 I created my Tic-Tac-Toe game using a single-page web application. As per the requirements, the game allows the user to create an account or sign up, sign in, change their password while signed in and sign out. The user must be signed in to play where they must start a "New Game" and can play a game by themselves or with a friend. The first move or player is "X" and it switches between "X" and "O" until a winner is declared or a draw.The user is unable to click on a space that has already been filled and cannot play on the board once a game is finished. To play again you hit, "Replay Game" and to check how many games have been played, simply click "Games Played."
 

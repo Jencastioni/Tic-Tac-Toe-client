@@ -8,7 +8,6 @@
 
 const authEvents = require('./auth/events')
 
-
 const gameEvents = require('./games/events')
 
 $(() => {
