@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+      <div id="login">
+        <div id="unauthenticated">
+          <form id="sign-up">
+            <input name="credentials[email]" placeholder="email here" type="text">
+            <input name="credentials[password]" placeholder="password here" type="password">
+            <input name="credentials[password_confirmation]" placeholder="confirm password here" type="password">
+            <button type="submit">Sign Up!</button>
+          </form>
+
+          <form id="sign-in">
+            <input name="credentials[email]" placeholder="email here" type="email">
+            <input name="credentials[password]" placeholder="password here" type="password">
+           <button type="submit">Sign In</button>
+          </form>   
+        </div>
+
+        <div id="authenticated">
+          <form id="change-password">
+            <div id="placeholder">
+              <input name="passwords[old]" placeholder="old password" type="password">
+              <input name="passwords[new]" placeholder="new password" type="password">
+          </div>
+           <button type="submit">Change Password</button>
+          </form>
+
+         <form id="sign-out">
+           <button type="submit">Sign Out</button>
+          </form>
+        </div>
+      </div>
+
+      
+      <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div class="game-buttons" id="gameButtons">
+          <button id="create-game">New Game</button>
+          <button type="submit" id="games-played">Games Played</button>
+         </div>
+
+          <p id="message"></p>
+          
+          <div class="board" id="board">
+            <div class="cell TL" data-cell="0"></div>
+            <div class="cell TM" data-cell="1"></div>
+            <div class="cell TR" data-cell="2"></div>
+            <div class="cell ML" data-cell="3"></div>
+            <div class="cell MM" data-cell="4"></div>
+            <div class="cell MR" data-cell="5"></div>
+            <div class="cell BL" data-cell="6"></div>
+            <div class="cell BM" data-cell="7"></div>
+            <div class="cell BR" data-cell="8"></div>
+          </div>
+
+        <div class="end-message" id="endMessage">
+          <div data-end-message-text></div>
+          <button id="replay-game">Play Again!</button>
+        </div>
+      </div>
+
+      
+      </div>
+    </body>
+</html>
+
