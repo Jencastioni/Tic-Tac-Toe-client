@@ -30,3 +30,4 @@ $(() => {
   $('.BM').on('click', gameEvents.onBM)
   $('.BR').on('click', gameEvents.onBR)
 })
+

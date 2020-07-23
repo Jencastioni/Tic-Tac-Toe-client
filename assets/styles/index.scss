@@ -16,7 +16,8 @@ body {
 
 .board{
   margin: auto;
-  padding-bottom: 4em;
+  padding-bottom: 3em;
+  padding-top: 1em;
   max-height: calc(100vh - 75px);
   max-width: calc(100vh - 75px);
   display: grid;
@@ -24,7 +25,7 @@ body {
   align-content: center;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(3, auto)
+  grid-template-columns: repeat(3, auto);
 }
 
 h1 {
@@ -34,16 +35,16 @@ h1 {
   text-align: center;
   font-family: 'Londrina Outline', cursive;
   color: white;
-  font-size: 150px;
+  font-size: 15vw;
   text-shadow: 7px 7px rgb(132, 51, 169);
 }
 
 p {
   text-align: center;
   font-family: 'Nunito', sans-serif;
-  font-size: 75px;
+  font-size: 7vw;
   color: white;
-  text-shadow: 5px 5px rgb(97, 97, 97);
+  text-shadow: 5px 5px rgb(132, 51, 169);
   margin: .5em;
 }
 
@@ -63,7 +64,7 @@ p {
   text-shadow: 6px 6px rgb(97, 97, 97);
   &:hover {
     background-color:  rgba(17, 166, 211, 0.815);
-    background: linear-gradient(to left,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
+    background: linear-gradient(to right,  rgb(112, 115, 227), rgba(17, 166, 211, 0.815), rgba(17, 166, 211, 0.815), rgba(66, 236, 165, 0.815));
   }
   user-select: none;
 
